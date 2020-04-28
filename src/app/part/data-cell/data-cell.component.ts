@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-cell.component.css']
 })
 export class DataCellComponent implements OnInit {
-
+  cellValue: string ="1119 fehér"
   constructor() { }
 
   ngOnInit(): void {
