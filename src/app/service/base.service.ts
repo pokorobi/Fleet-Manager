@@ -12,8 +12,16 @@ export class BaseService {
         email: "poko@gmail.com",
         phone: "+36304561234",
         city: "Budapest",
+        addres: "Fehervári ut 55/A",
+      },
+      {
+        id: 2,
+        name: "Poko Tamás",
+        email: "poko.tamas@gmail.com",
+        phone: "+36306581235",
+        city: "Budapest",
         addres: "Kis stáció utca 3",
-      }
+      },
     ],
     vehicles: [
       {
