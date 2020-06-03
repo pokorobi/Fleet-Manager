@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BaseService {
-  data = {
-    drivers: [
+  data = { // data nevezetű változo ami egy objektum lesz,  
+    drivers: [ // a drivers egy tömb lesz és a tömbön belül lesznek az egyes driverek az egyes objektumok 
       {
         id: 1,
         name: "Poko Rober",
@@ -38,7 +38,7 @@ export class BaseService {
 
   constructor() { }
 
-  getAll(dataType: string): any[] {
+  getAll(dataType: string): any[] { //ez egy metodus, a getAll leszedi az összes dolgot
     return this.data[dataType];
   }
 }

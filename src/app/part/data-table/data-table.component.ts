@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { BaseService } from '../../service/base.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-data-table',
@@ -7,26 +6,15 @@ import { BaseService } from '../../service/base.service';
   styleUrls: ['./data-table.component.css']
 })
 export class DataTableComponent implements OnInit {
+  @Input() list: any[]; // egy lista ami egy tömb
+  @Input() cols: any[];
 
   deleteIconClass: string = 'fa fa-trash';
 
-  cols: {key: string, text: string}[] = [
-    {key: 'id', text: '#'},
-    {key: 'name', text: 'Name'},
-    {key: 'email', text: 'Email'},
-    {key: 'phone', text: 'Phone'},
-    {key: 'city', text: 'City'},
-    {key: 'addres', text: 'Addres'}
-  ];
-
-  driver: any = {};
-
   constructor(
-    private bs: BaseService
   ) {}
 
   ngOnInit(): void {
-    this.driver = this.bs.getAll('drivers')[0];
   }
 
   onUpdate($event): void {
